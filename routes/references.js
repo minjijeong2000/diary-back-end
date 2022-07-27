@@ -9,9 +9,8 @@ router.get('/', referencesCtrl.index)
 router.use(decodeUserFromToken)
 router.post('/', checkAuth, referencesCtrl.create)
 router.put('/:id', checkAuth, referencesCtrl.update)
-router.put('/:id/add-photo', checkAuth, referencesCtrl.addPhoto)
 router.delete('/:id', checkAuth, referencesCtrl.delete)
-
+// router.put('/:id/add-photo', checkAuth, referencesCtrl.addPhoto)
 
 export {
   router
